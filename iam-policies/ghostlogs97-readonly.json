@@ -1,0 +1,29 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowListGhostLogsBucket",
+            "Effect": "Allow",
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::ghostlogs97"
+        },
+        {
+            "Sid": "AllowReadObjectsGhostLogsBucket",
+            "Effect": "Allow",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::ghostlogs97/*"
+        },
+        {
+            "Sid": "AllowListSecretDataBucket",
+            "Effect": "Allow",
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::ghost-secret-data-01"
+        },
+        {
+            "Sid": "AllowReadObjectsSecretDataBucket",
+            "Effect": "Allow",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::ghost-secret-data-01/*"
+        }
+    ]
+}
